@@ -1,0 +1,128 @@
+
+PseudoCode:
+
+DOM INSTANTIATION------------------------------------
+startGame = game button listener
+cardOne = Card1
+cardTwo = Card2
+cardThree = Card3
+cardFour = Card4
+useCardButton = use card button listener
+endTurn = end turn button listener
+
+disMonHP = MonsterHP
+disMonAtk = MonsterAttack
+disPlayerHp = PlayerHP
+disPlayerBlk = PlayerBlock
+disDrawCount = DrawCount
+disCount = DiscardCount
+disEnergy = EnergyCount
+
+
+
+Variables----------------------------------------------
+	
+
+deckArray[atk card, atk card, atk card, atk card, atk card, block card, block card, block card, block card, block card]
+drawPile[]
+hand[]
+discardPile[]
+monsterArray[]
+playerhp
+monsterhp
+monsterAtk
+blockAmount
+energy
+currentCard = 0
+
+FUNCTIONS----------------------------
+
+function begin
+  goto fight1 page
+  shuffle(DeckArray)
+  drawHand()
+  set playerhp = max
+  set monsterhp = monsterarray[0].hp
+  set monsterAtk = monAtk()
+
+function startTurn
+  function drawHand
+
+function init
+	clear drawPile array
+	for deckArray.length
+	copy from deckArray[random arraylength] to drawPile 
+	
+		
+	
+function shuffle(array)
+	for i > array.length
+	j = array.random
+	array[i], array[j] = array[j], array[i]
+
+
+function draw
+if drawPile.length === 0 {
+for discardPile.length
+pop discardPile to drawPile
+shuffle(drawpile)}
+ hand[].push = drawPile[].pop
+ 
+ 
+function drawHand
+	for 1 to 4
+	call draw
+
+function discard(x)
+pop hand[x] to discardPile
+
+	
+function playCard(x) 
+if (hand[x].name = "atk" && energy > 0)
+	monster subtract 5hp
+else if (hand[x].name = "block")
+	blockAmount + 6
+END
+energy--
+discard[x]
+
+
+function monAtk
+	return rand [5-15]
+	
+function combat
+	for hand.length pop to discardPile
+	Subtract blockAmount from MonsterAttack
+	if MonsterAttack > 0
+		playerhp - MonsterAttack
+	
+
+
+Main Game  
+	button start game onclick
+	call Begin
+	
+	
+	
+	On CardX.click --Use DOM
+	call playCard(x)
+	
+	On buttonClick END TURN
+	call combat()
+	
+	
+
+
+
+
+
+ENHANCEMENT	IDEAS
+
+/*Highlight the selected card*/
+function cardSelect(x) 
+currentCard = x
+highlight cardX
+
+/*Use button to "fire" the card off*/
+while energy > 0 
+enable useCardButton --maybe do this in CSS?

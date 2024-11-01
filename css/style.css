@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    background-color: rgb(190, 235, 190);
+}
+
+h1{
+    font-family: Tiny5, sans-serif;
+    font-size: 50px;
+  }
+
+ #top{
+    border: 1px solid purple;
+    display: flex;
+    justify-content: space-around;
+ } 
+
+ #player{
+    border: 1px solid red;
+    width: 25%;
+    /* float: left; */
+ } 
+
+ #enemy{
+    border: 1px solid blue;
+    width: 25%;
+    /* float: right; */
+
+ }
+
+ #bot{
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #details{
+    border: 1px solid black;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+ }
+ #hand{
+    border: 1px solid green;
+    float: left;
+    width: 60%;
+ }
+
+ #display
+ {
+    border: 1px solid orange;
+    width: 25%;
+    /* float: right; */
+    /* position: relative; */
+ }
+#energy{
+    border: 1px solid teal;
+    width: 5%;
+    margin: 0 auto;
+    /* position: absolute; */
+}
+#piles {
+    border: 1px solid maroon
+}
