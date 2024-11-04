@@ -2,73 +2,177 @@ body {
     text-align: center;
     font-family: Raleway, sans-serif;
     background-color: rgb(190, 235, 190);
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-image: url(/assets/background.png) ;
+    background-size: cover;
+
 }
 
+h1{
+   color: white;
+}
+
+.start{
+   color: white;
+}
+
+.spacer{
+    height: 1vh;
+}
 h1{
     font-family: Tiny5, sans-serif;
     font-size: 50px;
   }
 
  #top{
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     justify-content: space-around;
+    height: 60vh;
  } 
 
  #player{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 25%;
     min-height: 180px;
+    color: white;
+    background-color: rgba(10, 10, 10, 0.90);
+    border-radius: 10px;
+    font-style: bold;
+    font-family: Tiny5, sans-serif;
+    font-size: 20px;
     /* float: left; */
  } 
+ #playerAvatar{
+   height: 80%;
+   background-image: url(/assets/hero.png);
+   background-size: cover;
+ }
+ #enemyAvatar{
+   height: 80%;
+   background-image: url(/assets/enemyBug.png);
+   background-size: cover;
+ }
+ .description{
+   color: white;
+   background-color: rgba(10, 10, 10, 0.90);
+   font-family: Raleway, sans-serif;
+   font-size: 24px;
+   width: 45%;
+   align-self: center;
+   margin: auto;
+ }
+ progress {
+   border: 2px solid grey;
+   width: 300px;
+   height: 10px;
+   border-radius: 5px;
+ 
+}
 
  #enemy{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    background-color: rgba(10, 10, 10, 0.90);
     width: 25%;
     min-height: 180px;
+    color: white;
+    font-style: bold;
+    font-family: Tiny5, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
     /* float: right; */
 
  }
 
  #bot{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: space-between;
+    height: 35vh;
+    /* background-color: rgb(61, 87, 88); */
+    border-radius: 10px;
  }
 
  #details{
-    border: 1px solid black;
+    border: 5px solid rgb(179, 179, 63);
+    border-radius: 5px;
     display: flex;
     width: 30%;
     justify-content: space-between;
+    background-color: rgba(10, 10, 10, 0.90);
  }
  #hand{
-    border: 1px solid green;
+    border: 5px solid rgb(179, 179, 63);
+    border-radius: 10px;
     float: left;
     width: 60%;
     display: flex;
     justify-content: space-around;
-    min-height: 200px; 
+    min-height: 180px; 
+    background-color: rgba(10, 10, 10, 0.10);
  }
  .cards{
-    border: 1px solid pink;
-    width: 17%;
+    /* border: 1px solid pink; */
+    width: 20%;
+    cursor: pointer;
+    color: transparent; /*hide values*/
+    background-size: cover;
+    
     /* margin: auto; */
  }
 
  #display
  {
-    border: 1px solid orange;
-    width: 25%;
+    /* border: 1px solid orange; */
+    width: 45%;
+    
     /* float: right; */
     /* position: relative; */
  }
+ #buttonZone{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    
+ }
 #energy{
-    border: 1px solid teal;
+    border: 5px solid white;
+    border-radius: 5px;
+    background-color: rgb(47, 140, 140);
+    color: rgb(236, 233, 233);
+    font-style: bold;
+    font-size: 26px;
     width: 15%;
     margin: 0 auto;
     /* position: absolute; */
 }
+#energyDis{
+    color: rgb(236, 233, 233);
+    font-style: bold;
+    font-size: 22px; 
+}
 #piles {
-    border: 1px solid maroon
+    color: rgb(236, 233, 233);
+    font-style: bold;
+    font-size: 22px; 
+}
+#pilesDis{
+    color: rgb(236, 233, 233);
+    font-style: bold;
+    font-size: 22px; 
+}
+
+#endTurn{
+    background-color: rgb(245, 14, 14);
+    margin: 10px;
+    color: white;
+    font-style: bold;
+    font-size: 20px;
+    font-family: Tiny5;
+    width: 200px;
+    height: 55px;
+    border: 5px solid white;
+    border-radius: 10px;
 }

@@ -13,42 +13,58 @@
 <body>
     <div id = "top">
         <div class ="card" id = "player">
+            <div>BLOCK</div>
             <div id="playerBlock">10</div>
-            <div id="playerAvater"> </div>
+            <div>Player</div>
+            <div id="playerAvatar"></div>
             <div id="playerHP">01</div>
-            
+            <progress id="healthBar" value="1" max="50"></progress>        
         </div>
+        <div class ="description"><p>They villagers have heard rumor that programatic monsters are overflowing 
+            from the dungeon.  They call upon the hero known only as <b><i>The Engineer</i></b> to assist them.
+            You answer there call, and shortly after arriving at the dungeon you find a dreaded <b>BUG</b>!</p>
+            <p>Not to worry, you should be able to defeat it using your <b>skills</b>...
+        </p>
+        <p>Each card in your deck costs 1 <i><b>Energy</b></i> so choose your actions carefully.</p>
+        <p>When you are done playing cards, press the  <i><b>END TURN</b></i> button but beware! 
+            Once your turn is over the monster will attack!</p>
+        <p>Make sure you have some <i><b>BLOCK</b></i> to protect yourself.</p>
+        <p>Fear Not!  When your <i><b>DRAW PILE</b></i> runs out, your <i><b>DISCARD PILE</b></i> will 
+            be shuffled back in to replace it.</p>
+    </div>
         <div class ="card" id = "enemy">
+            <div>ATTACK</div>
             <div id="enemyAtk">0</div>
             <div id="enemyName">Mon_Name</div>
             <div id="enemyAvatar"></div>
             <div id="enemyHP">01</div>
+            <progress id="enemyBar" value="1" max="40"></progress>
         </div>
     </div>
-
+    <div class = "body spacer"></div>
     <div id = "bot">
         <div id="hand"> 
-            <div class="cards" id = "0">
-                1
-                <p>card text here</p>
-            </div>
+            <div class="cards" id = "0">1</div>
             <div class="cards" id = "1">2</div>
             <div class="cards" id = "2">3</div>
             <div class="cards" id = "3">4</div>
         </div>
         <div id="details">
             <div id="display">
+                <h4 id="energyDis">Energy</h4>
                 <div id="energy">0</div>
+                <h4 id="pilesDis">Draw Pile  //   Discard Pile</h4>
                 <div id="piles">
                     <span id ="drawPile">0</span>
+                    <span>//</span>
                     <span id ="discPile">0</span>
                 </div>
             </div>
           
-            <span>
+            <div id="buttonZone">
                 <button id="endTurn">END TURN</button>
-                <button id="test">push me</button>
-            </span>
+                <!-- <button id="test">push me</button> -->
+            </div>
         </div>  
     </div>
 </body>

@@ -9,6 +9,8 @@ const energyElement = document.querySelector('#energy');
 const drawPileElement = document.querySelector('#drawPile');
 const discPileElement = document.querySelector('#discPile');
 const endButtonElement = document.querySelector('#endTurn');
+let health = document.getElementById("healthBar");
+let enemyHealth = document.getElementById("enemyBar");
 
 //test button
 const testButtonElement = document.querySelector('#test');
@@ -18,13 +20,13 @@ const testButtonElement = document.querySelector('#test');
 
 const game = {
     monster: [
-        {name: 'Bug', hp: 20, baseAtk: 1},
+        {name: 'Bug', hp: 40, baseAtk: 1},
         {name: 'Code Monkey', hp: 40, baseAtk: 5}
     ],
     currentEnemy: 0,
     card: [
-        {id: 0, name: 'de-bug', text: 'deal 5 damage', dmg: 5, block: 0},
-        {id: 1, name: 'NULL-ify', text: 'gain 6 block this turn', dmg: 0, block: 6}
+        {id: 0, name: 'de-bug', text: 'deal 5 damage', dmg: 5, block: 0, img: '/assets/debug.png'},
+        {id: 1, name: 'NULL-ify', text: 'gain 6 block this turn', dmg: 0, block: 6, img: '/assets/nullify.png'}
     ],
     hand:[     
     ],
@@ -123,7 +125,7 @@ function playCard(x,y) {
     game.hand.splice(x,1)//remove card from hand
     // console.log(game.discPile);
     } else if(game.player.energy === 0) {
-        alert("No Mana Error")
+        alert("You don't have the enegry to play that card.")
     } else {
         //Enhancement - Make a variable to track which monster we are on and increment it when defeating.
         //Then we can change these value assignments below to match
@@ -138,13 +140,22 @@ function playCard(x,y) {
 function pushDisplay() {
     blockElement.textContent = game.player.blkAmount
     playerHPElement.textContent = game.player.hp
+    health.value = game.player.hp
     enemyAtkElement.textContent = game.enemy.dmg
     enemyNameElement.textContent = game.enemy.name
     enemyHPElement.textContent = game.enemy.hp
+    enemyHealth.value = game.enemy.hp
+    
     energyElement.textContent = game.player.energy
     drawPileElement.textContent = game.drawPile.length
     discPileElement.textContent = game.discPile.length
 
+
+    /*
+    let health = document.getElementById("health")
+health.value -= 10; //Or whatever you want to do with it. 
+let enemyHealth = document.getElementById("enemyBar");
+*/
 
     // console.log(cardElements[0].textContent);
     // console.log(game.hand[0]);
@@ -160,7 +171,14 @@ function pushDisplay() {
         
         
        cardElements[i].textContent = game.hand[i] //CHECK MEEEE
+       if(cardElements[i].textContent === '1' || cardElements[i].textContent === '0') {
+       cardElements[i].style.backgroundImage = `url('${game.card[cardElements[i].textContent].img}')`//I AM COOL
+       } 
+       else {cardElements[i].style.backgroundImage ='url(/assets/nocard.png)';
     }
+}
+       
+       
 
 }
 
