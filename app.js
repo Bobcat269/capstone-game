@@ -25,8 +25,8 @@ const game = {
     ],
     currentEnemy: 0,
     card: [
-        {id: 0, name: 'de-bug', text: 'deal 5 damage', dmg: 5, block: 0, img: '/assets/debug.png'},
-        {id: 1, name: 'NULL-ify', text: 'gain 6 block this turn', dmg: 0, block: 6, img: '/assets/nullify.png'}
+        {id: 0, name: 'de-bug', text: 'deal 5 damage', dmg: 5, block: 0, img: 'assets/debug.png'},
+        {id: 1, name: 'NULL-ify', text: 'gain 6 block this turn', dmg: 0, block: 6, img: 'assets/nullify.png'}
     ],
     hand:[     
     ],
