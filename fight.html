@@ -13,28 +13,32 @@
 <body>
     <div id = "top">
         <div class ="card" id = "player">
-            <div id="playerBlock">Block Counter</div>
+            <div id="playerBlock">10</div>
             <div id="playerAvater"> </div>
-            <div id="playerHP">50</div>
+            <div id="playerHP">01</div>
             
         </div>
         <div class ="card" id = "enemy">
             <div id="enemyAtk">0</div>
+            <div id="enemyName">Mon_Name</div>
             <div id="enemyAvatar"></div>
-            <div id="enemyHP">20</div>
+            <div id="enemyHP">01</div>
         </div>
     </div>
 
     <div id = "bot">
-        <span id="hand"> 
-            <span id="card1">1</span>
-            <span id="card2">2</span>
-            <span id="card3">3</span>
-            <span id="card4">4</span>
-        </span>
+        <div id="hand"> 
+            <div class="cards" id = "0">
+                1
+                <p>card text here</p>
+            </div>
+            <div class="cards" id = "1">2</div>
+            <div class="cards" id = "2">3</div>
+            <div class="cards" id = "3">4</div>
+        </div>
         <div id="details">
             <div id="display">
-                <div id="energy">3</div>
+                <div id="energy">0</div>
                 <div id="piles">
                     <span id ="drawPile">0</span>
                     <span id ="discPile">0</span>
@@ -43,6 +47,7 @@
           
             <span>
                 <button id="endTurn">END TURN</button>
+                <button id="test">push me</button>
             </span>
         </div>  
     </div>
