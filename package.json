@@ -1,0 +1,15 @@
+{
+  "name": "capstone-game",
+  "version": "1.0.0",
+  "description": "Project Idea:  Slay the Spire Clone Simplified\r Create a game where the user has a deck of cards they use to fight monsters they encounter.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.12.0"
+  }
+}
